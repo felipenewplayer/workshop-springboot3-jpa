@@ -7,8 +7,6 @@ import com.estudandonaweb.course.entities.pk.OrderItemPK;
 
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
 
 @Entity
@@ -17,7 +15,6 @@ public class OrderItem implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@EmbeddedId
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private OrderItemPK id;
 	private Integer quantity;
 	private Double price;
